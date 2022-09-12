@@ -62,3 +62,8 @@ body
     background-image: url("https://i.pinimg.com/originals/7d/1d/e1/7d1de13ec1ac4e41168e48aeaf8c920f.gif");
 }
     
+button:hover
+{
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
