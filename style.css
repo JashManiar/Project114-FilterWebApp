@@ -59,7 +59,7 @@ h3
     
 body
 {
-    background-image:bg.gif;
+    background-image:"bg.gif";
 }
     
 button:hover
