@@ -1,8 +1,53 @@
-h3{
+h3
+{
     font-size: 25px !important;
-    color: black !important;
-    font:
 }
-canvas{
-    border: 4px black solid;
+
+.btn-success:hover
+{
+    background-color: red;
+}
+
+canvas
+{
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example
+{
+  0%   {box-shadow: 1px 1px 38px red;}
+  10%  {box-shadow: 1px 1px 38px yellow;}
+  20%  {box-shadow: 1px 1px 38px blue;}
+  30% {box-shadow: 1px 1px 38px green;}
+    40% {box-shadow: 1px 1px 38px orange;}
+    50% {box-shadow: 1px 1px 38px purple;}
+    60% {box-shadow: 1px 1px 38px cornflowerblue;}
+    70% {box-shadow: 1px 1px 38px blueviolet;}
+    80% {box-shadow: 1px 1px 38px violet;}
+    90% {box-shadow: 1px 1px 38px turquoise;}
+    100% {box-shadow: 1px 1px 38px teal;}
+  
+}
+
+@keyframes heading
+{
+      0%   {box-shadow: 1px 1px 38px red;}
+  10%  {box-shadow: 1px 1px 38px yellow;}
+  20%  {box-shadow: 1px 1px 38px blue;}
+  30% {box-shadow: 1px 1px 38px green;}
+    40% {box-shadow: 1px 1px 38px orange;}
+    50% {box-shadow: 1px 1px 38px purple;}
+    60% {box-shadow: 1px 1px 38px cornflowerblue;}
+    70% {box-shadow: 1px 1px 38px blueviolet;}
+    80% {box-shadow: 1px 1px 38px violet;}
+    90% {box-shadow: 1px 1px 38px turquoise;}
+    100% {box-shadow: 1px 1px 38px teal;}
+
+h3
+{
+    animation-name: heading;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
