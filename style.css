@@ -3,9 +3,14 @@ h3
     font-size: 25px !important;
 }
 
-.btn-success:hover
+button
 {
-    background-color: red;
+   animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+    
+    background: radial-gradient(ellipse at top, #e66465, transparent),
+            radial-gradient(ellipse at bottom, #4d9f0c, transparent);
 }
 
 canvas
@@ -51,3 +56,10 @@ h3
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
+    
+body
+    {
+        background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    }
+    
