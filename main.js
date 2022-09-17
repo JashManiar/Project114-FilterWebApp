@@ -1,23 +1,29 @@
+mustache_x=0;
+mustache_y=0;
+lipstick_x=0;
+lipstick_y=0;
+
 function preload(){
+    mustache = loadImage("https://i.postimg.cc/3x3QzSGq/m.png");
+    lipstick = loadImage("https://i.postimg.cc/PxFvYgkv/l1.png");
 }
 
 function setup(){
-    canvas = createCanvas(200,200);
+    canvas = createCanvas(300,300);
     canvas.center();
     video = createCapture(VIDEO);
-    video.size(300,300);
+    video.size(200,200);
     video.hide();
+
     poseNet = ml5.poseNet(video,modelLoaded);
-    poseNet.on('pose',moustachefilter);
-    poseNet.on('pose',lipstickfilter);
-    poseNet.on('pose',maskfilter);
-    poseNet.on('pose',hairstylefilter);   
+    poseNet.on('pose',gotPose);
     
+
 }
 
-function draw()
-{
+function draw(){
     image(video,0,0,300,300);
+    image(mustache,mustache_x,mustache_y,60,45);
 }
 
 function take_snapshot(){
@@ -28,36 +34,12 @@ function modelLoaded(){
     console.log("poseNet Is Initialized");
 }
 
-function moustachefilter(results){
+function gotPose(results){
     if(results.length > 0){
         console.log(results);
-        console.log("moustache x: "+results[0].pose.nose.x);
-        console.log("moustache y: "+results[0].pose.nose.y);
-        
-    };
-}
-
-function lipstickfilter(results){
-    if(results.length > 0){
-        console.log(results);
-        console.log("lipstick x: "+results[0].pose.nose.x);
-        console.log("lipstick y: "+results[0].pose.nose.y);
-    };
-}
-
-function maskfilter(results){
-    if(results.length > 0){
-        console.log(results);
-        console.log("mask x: "+results[0].pose.nose.x);
-        console.log("mask y: "+results[0].pose.nose.y);
-        
-    };
-}
-
-function hairstylefilter(results){
-    if(results.length > 0){
-        console.log(results);
-        console.log("hairstyle x: "+results[0].pose.rightEye.x);
-        console.log("hairstyle y: "+results[0].pose.rightEye.y);
+        console.log("nose x: "+results[0].pose.nose.x);
+        mustache_x = results[0].pose.nose.x-30;
+        console.log("nose y: "+results[0].pose.nose.y);
+        mustache_y = results[0].pose.nose.y;
     };
 }
