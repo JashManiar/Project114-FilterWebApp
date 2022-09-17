@@ -1,11 +1,9 @@
 mustache_x=0;
 mustache_y=0;
-lipstick_x=0;
-lipstick_y=0;
+
 
 function preload(){
     mustache = loadImage("https://i.postimg.cc/3x3QzSGq/m.png");
-    lipstick = loadImage("https://i.postimg.cc/PxFvYgkv/l1.png");
 }
 
 function setup(){
