@@ -15,6 +15,7 @@ canvas
     animation-name: example;
     animation-duration: 4s;
     animation-iteration-count: infinite;
+    
 }
 
 @keyframes example
